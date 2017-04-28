@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   upd:
     image: gistda/gnss-udp-receiver
     ports:
