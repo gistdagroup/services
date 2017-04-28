@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  upd:
+  udp:
     image: gistda/gnss-udp-receiver
     ports:
       - 8000/udp:3000/udp
