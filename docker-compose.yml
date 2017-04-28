@@ -121,7 +121,9 @@ service:
     restart: unless-stopped
     depends_on:
       - mongo
-      
+
   mongo:
     image: mongo
     restart: unless-stopped
+    volumes:
+      - /data/db:/data/db
