@@ -1,0 +1,127 @@
+version: '3'
+
+service:
+  upd:
+    image: gistda/gnss-udp-receiver
+    ports:
+      - 8000/udp:3000/udp
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp1:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9001:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=1
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp2:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9002:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=2
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp3:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9003:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=3
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp4:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9004:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=4
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+
+  tcp5:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9005:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=5
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp6:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9006:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=6
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp7:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9007:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=7
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp8:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9008:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=8
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp9:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9009:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=9
+    restart: unless-stopped
+    depends_on:
+      - mongo
+
+  tcp10:
+    image: gistda/nmea-tcp-receiver
+    ports:
+      - 9010:3000
+    environment:
+      - NODE_ENV=production
+      - DEVICE_ID=10
+    restart: unless-stopped
+    depends_on:
+      - mongo
+      
+  mongo:
+    image: mongo
+    restart: unless-stopped
