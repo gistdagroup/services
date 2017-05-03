@@ -4,7 +4,7 @@ services:
   udp:
     image: gistda/gnss-udp-receiver
     ports:
-      - 8000/udp:3000/udp
+      - 9000/udp:3000/udp
     environment:
       - NODE_ENV=production
     restart: unless-stopped
