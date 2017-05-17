@@ -1,5 +1,5 @@
 #!/bin/bash
-
+git pull -r
 docker pull gistda/nmea-tcp-receiver
 for i in {1..10}
 do
