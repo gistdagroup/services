@@ -17,7 +17,7 @@ services:
       - 9001:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=1
+      - DEVICE_ID=9001
     restart: unless-stopped
     depends_on:
       - mongo
@@ -28,7 +28,7 @@ services:
       - 9002:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=2
+      - DEVICE_ID=9002
     restart: unless-stopped
     depends_on:
       - mongo
@@ -39,7 +39,7 @@ services:
       - 9003:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=3
+      - DEVICE_ID=9003
     restart: unless-stopped
     depends_on:
       - mongo
@@ -50,7 +50,7 @@ services:
       - 9004:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=4
+      - DEVICE_ID=9004
     restart: unless-stopped
     depends_on:
       - mongo
@@ -62,7 +62,7 @@ services:
       - 9005:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=5
+      - DEVICE_ID=9005
     restart: unless-stopped
     depends_on:
       - mongo
@@ -73,7 +73,7 @@ services:
       - 9006:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=6
+      - DEVICE_ID=9006
     restart: unless-stopped
     depends_on:
       - mongo
@@ -84,7 +84,7 @@ services:
       - 9007:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=7
+      - DEVICE_ID=9007
     restart: unless-stopped
     depends_on:
       - mongo
@@ -95,7 +95,7 @@ services:
       - 9008:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=8
+      - DEVICE_ID=9008
     restart: unless-stopped
     depends_on:
       - mongo
@@ -106,7 +106,7 @@ services:
       - 9009:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=9
+      - DEVICE_ID=9009
     restart: unless-stopped
     depends_on:
       - mongo
@@ -117,7 +117,7 @@ services:
       - 9010:3000
     environment:
       - NODE_ENV=production
-      - DEVICE_ID=10
+      - DEVICE_ID=9010
     restart: unless-stopped
     depends_on:
       - mongo
