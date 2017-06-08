@@ -1,6 +1,17 @@
 version: '3'
 
 services:
+  web:
+    image: gistda/web
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    depends_on:
+      - apis
+
   apis:
     image: gistda/apis
     ports:
@@ -10,7 +21,7 @@ services:
     restart: unless-stopped
     depends_on:
       - mongo
-      
+
   udp:
     image: gistda/gnss-udp-receiver
     ports:
