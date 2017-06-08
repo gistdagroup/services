@@ -1,5 +1,5 @@
 #!/bin/bash
-git pull -r
+
 docker pull gistda/gnss-udp-receiver
 docker-compose stop udp || true
 docker-compose rm -f udp || true
